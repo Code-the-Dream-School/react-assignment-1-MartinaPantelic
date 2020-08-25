@@ -1,11 +1,46 @@
-import React, {Component} from 'react';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 
-class Game extends Component {
+import StartBtn from './StartBtn';
 
-  render(){
-    return ();
+import logo from '../images/logo.png';
+
+class App extends React.Component {
+
+  render() {
+    return (
+      <div className="content">
+        <div className="container">
+        <div className="center welcome-msg">
+        <img className="logo" src={logo} alt="logo"></img>
+        <h1 className="niceFont">TIC TAC TOE</h1>
+
+      {/* START GAME */}
+
+        <StartBtn />
+
+          </div>
+        </div>
+      </div>
+    )
   }
+
 }
 
-export default Game;
+
+
+
+
+
+
+
+
+
+
+
+ReactDOM.render(<App />, document.getElementById("root"));
+
+
+
+export default App;
